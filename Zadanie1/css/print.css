@@ -1,0 +1,115 @@
+/* Print styles: only the CV should print, on one page, without chrome. */
+@media print {
+  .site-header,
+  .site-footer,
+  .skip-link {
+    display: none !important;
+  }
+
+  body {
+    background: #fff;
+    color: #000;
+    font-size: 9.5pt;
+    line-height: 1.35;
+  }
+
+  main {
+    padding: 0;
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .hero-banner {
+    background-image: none !important;
+    border: none !important;
+    padding: 0 !important;
+  }
+
+  .corner-marks,
+  .eyebrow::before {
+    display: none !important;
+  }
+
+  .eyebrow {
+    border: none !important;
+    background: none !important;
+    padding: 0 !important;
+  }
+
+  h1 {
+    font-size: 17pt !important;
+    margin-bottom: 8pt !important;
+  }
+
+  .cv-layout {
+    border: none;
+  }
+
+  .cv-col {
+    padding: 0 10pt !important;
+  }
+
+  .cv-col--side {
+    background: #fff !important;
+    color: #000 !important;
+    border-right: 1px solid #000;
+    padding-left: 0 !important;
+  }
+
+  .cv-col--side a {
+    color: #000 !important;
+  }
+
+  .cv-col--main {
+    background: #fff !important;
+  }
+
+  .cv-photo {
+    max-width: 110px;
+    margin-bottom: 8pt !important;
+  }
+
+  .cv-block + .cv-block {
+    margin-top: 10pt !important;
+  }
+
+  .cv-block h2 {
+    font-size: 9pt !important;
+    margin-bottom: 3pt !important;
+  }
+
+  .cv-block p {
+    margin-bottom: 4pt !important;
+  }
+
+  .role-entry {
+    margin-bottom: 1pt !important;
+  }
+
+  .skill-bars {
+    gap: 4pt !important;
+  }
+
+  .skill-bar-track,
+  .key-things li {
+    background: #eee !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .skill-bar-fill {
+    background: #000 !important;
+  }
+
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  @page {
+    margin: 1cm;
+  }
+}

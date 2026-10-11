@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="sk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bohdan Myrinets — Kde ma nájdete</title>
+    <meta
+      name="description"
+      content="Interaktívna mapa: kde je moja škola a bydlisko, s možnosťou pridať vlastné body a vypočítať vzdialenosť."
+    />
+    <meta property="og:title" content="Bohdan Myrinets — Kde ma nájdete" />
+    <meta property="og:description" content="Odkiaľ dochádzam na FEI STU." />
+    <meta property="og:image" content="../img/me.jpeg" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="../favicon.png" type="image/png" />
+    <link rel="stylesheet" href="../css/leaflet/leaflet.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Preskočiť na obsah</a>
+
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="../index.html">
+          <svg
+            class="monogram"
+            viewBox="0 0 64 64"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <rect width="64" height="64" rx="14"></rect>
+            <text x="32" y="43" text-anchor="middle" font-size="28">BM</text>
+          </svg>
+          <span>
+            <span class="brand-name">Bohdan Myrinets</span>
+            <span class="brand-tagline"
+              >Študent FEI STU a medior softvérový vývojár v Innovatrics.</span
+            >
+          </span>
+        </a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="main-nav"
+          aria-label="Otvoriť menu"
+        >
+          <span class="nav-toggle-icon"></span>
+        </button>
+        <nav class="main-nav" id="main-nav" aria-label="Hlavná navigácia">
+          <ul>
+            <li><a href="../index.html">Profil</a></li>
+            <li><a href="cv.html">Životopis</a></li>
+            <li><a href="workspace.html">Pracovné prostredie</a></li>
+            <li><a href="schedule.html">Kedy ma zastihnete</a></li>
+            <li><a href="map.html" aria-current="page">Kde ma nájdete</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <div class="container">
+        <section class="section hero-banner framed">
+          <div class="corner-marks" aria-hidden="true">
+            <span></span><span></span><span></span><span></span>
+          </div>
+          <span class="eyebrow">Mapa</span>
+          <h1>Odkiaľ dochádzam</h1>
+          <p>
+            Na mape je trvalo vyznačená FEI STU, kam chodím na prednášky, a moje
+            bydlisko v Petržalke. Klikom na mapu môžeš pridať ďalší bod,
+            pomenovať ho a porovnať jeho vzdialenosť od školy alebo domova.
+          </p>
+
+          <div class="map-layout">
+            <div
+              id="map"
+              role="application"
+              aria-label="Interaktívna mapa Bratislavy"
+            ></div>
+
+            <div class="map-panel">
+              <div class="map-empty-state" data-map-empty>
+                Zatiaľ tu nie je žiadny vlastný bod. Klikni kdekoľvek na mapu,
+                zadaj názov miesta a objaví sa v zozname nižšie aj vo výbere na
+                porovnanie vzdialenosti.
+              </div>
+
+              <form class="map-form" data-distance-form>
+                <label for="from-select">Bod</label>
+                <select id="from-select" data-select-from></select>
+
+                <label for="to-select">Cieľ</label>
+                <select id="to-select" data-select-to></select>
+              </form>
+
+              <div
+                class="distance-result"
+                data-distance-result
+                aria-live="polite"
+              >
+                Vyberte bod a cieľ na porovnanie vzdialenosti.
+              </div>
+
+              <h2>Moje pridané body</h2>
+              <ul class="point-list" data-point-list></ul>
+
+              <p class="map-source">
+                Mapové podklady ©
+                <a href="https://www.openstreetmap.org/copyright"
+                  >OpenStreetMap</a
+                >
+                contributors, knižnica
+                <a href="https://leafletjs.com/">Leaflet</a>. Vzdialenosť
+                počítam vlastným kódom podľa Haversinovho vzorca.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <address>
+          <a href="mailto:xmyrinets@stuba.sk">xmyrinets@stuba.sk</a><br />
+          <a href="tel:+421900123456">+421 900 123 456</a><br />
+          © 2026 Bohdan Myrinets
+        </address>
+        <div class="footer-sources">
+          <span>Zdroje</span>
+          <ul>
+            <li><a href="../fonts/OFL.txt">Inter (licencia OFL)</a></li>
+            <li>
+              <a href="https://www.openstreetmap.org/copyright"
+                >Mapové podklady © OpenStreetMap</a
+              >
+            </li>
+            <li><a href="https://leafletjs.com/">Knižnica Leaflet</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/leaflet/leaflet.js"></script>
+    <script src="../js/script.js"></script>
+  </body>
+</html>

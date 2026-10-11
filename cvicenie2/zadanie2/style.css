@@ -1,0 +1,73 @@
+@font-face {
+    font-family: "MojFont";
+    src: url("inter-font.woff2") format("woff2");
+}
+
+body {
+    font-family: "MojFont", sans-serif;
+    background-color: #eeeeee;
+    margin: 0;
+}
+
+header {
+    background-color: #333333;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 40px;
+    margin: 0 0 15px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 600;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    width: 80%;
+    max-width: 900px;
+    margin: 30px auto;
+}
+
+section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+h2 {
+    color: darkblue;
+}
+
+p {
+    font-size: 18px;
+    text-align: center;
+}
+
+ul {
+    font-size: 18px;
+}
+
+img {
+    display: block;
+    width: 300px;
+    max-width: 100%;
+    margin: 15px auto 0 auto;
+    border-radius: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+}

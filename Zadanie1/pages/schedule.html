@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="sk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bohdan Myrinets — Kedy ma zastihnete</title>
+    <meta
+      name="description"
+      content="Môj týždenný rozvrh — prednášky, cvičenia a telesná kultúra, s aktuálne prebiehajúcou hodinou a priebehom semestra."
+    />
+    <meta property="og:title" content="Bohdan Myrinets — Kedy ma zastihnete" />
+    <meta
+      property="og:description"
+      content="Kedy mám čas a kedy práve sedím na prednáške."
+    />
+    <meta property="og:image" content="../img/me.jpeg" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="../favicon.png" type="image/png" />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Preskočiť na obsah</a>
+
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="../index.html">
+          <svg
+            class="monogram"
+            viewBox="0 0 64 64"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <rect width="64" height="64" rx="14"></rect>
+            <text x="32" y="43" text-anchor="middle" font-size="28">BM</text>
+          </svg>
+          <span>
+            <span class="brand-name">Bohdan Myrinets</span>
+            <span class="brand-tagline"
+              >Študent FEI STU a medior softvérový vývojár v Innovatrics.</span
+            >
+          </span>
+        </a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="main-nav"
+          aria-label="Otvoriť menu"
+        >
+          <span class="nav-toggle-icon"></span>
+        </button>
+        <nav class="main-nav" id="main-nav" aria-label="Hlavná navigácia">
+          <ul>
+            <li><a href="../index.html">Profil</a></li>
+            <li><a href="cv.html">Životopis</a></li>
+            <li><a href="workspace.html">Pracovné prostredie</a></li>
+            <li>
+              <a href="schedule.html" aria-current="page">Kedy ma zastihnete</a>
+            </li>
+            <li><a href="map.html">Kde ma nájdete</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <div class="container">
+        <section class="section hero-banner framed">
+          <div class="corner-marks" aria-hidden="true">
+            <span></span><span></span><span></span><span></span>
+          </div>
+          <span class="eyebrow">Rozvrh</span>
+          <h1>Kedy mám čas</h1>
+          <p>
+            Popri práci v Innovatrics chodím na prednášky a cvičenia z odboru
+            aplikovaná informatika. Nižšie je môj aktuálny týždenný rozvrh —
+            bunka, v ktorej práve sedím, sa zvýrazní automaticky.
+          </p>
+
+          <h2>Týždenný rozvrh</h2>
+
+          <div class="filters" role="group" aria-label="Filter rozvrhu">
+            <button
+              type="button"
+              class="btn is-active"
+              data-filter="all"
+              aria-pressed="true"
+            >
+              Všetko
+            </button>
+            <button
+              type="button"
+              class="btn"
+              data-filter="lecture"
+              aria-pressed="false"
+            >
+              Prednášky
+            </button>
+            <button
+              type="button"
+              class="btn"
+              data-filter="exercise"
+              aria-pressed="false"
+            >
+              Cvičenia
+            </button>
+          </div>
+
+          <div class="schedule-scroll">
+            <table class="schedule">
+              <caption>
+                Rozvrh na zimný semester 2026/2027
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Čas</th>
+                  <th scope="col" data-day="mon">Po</th>
+                  <th scope="col" data-day="tue">Ut</th>
+                  <th scope="col" data-day="wed">St</th>
+                  <th scope="col" data-day="thu">Št</th>
+                  <th scope="col" data-day="fri">Pi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">7:00–8:00</th>
+                  <td rowspan="7"></td>
+                  <td rowspan="2"></td>
+                  <td rowspan="9"></td>
+                  <td></td>
+                  <td rowspan="14"></td>
+                </tr>
+                <tr>
+                  <th scope="row">8:00–9:00</th>
+                  <td
+                    data-day="thu"
+                    data-start="08:00"
+                    data-end="10:00"
+                    data-type="lecture"
+                    rowspan="2"
+                  >
+                    <span class="subject-name">Databázové systémy</span> —
+                    prednáška
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">9:00–10:00</th>
+                  <td
+                    data-day="tue"
+                    data-start="09:00"
+                    data-end="11:00"
+                    data-type="lecture"
+                    rowspan="2"
+                  >
+                    <span class="subject-name">Softvérové inžinierstvo</span> —
+                    prednáška
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">10:00–11:00</th>
+                  <td rowspan="9"></td>
+                </tr>
+                <tr>
+                  <th scope="row">11:00–12:00</th>
+                  <td rowspan="7"></td>
+                </tr>
+                <tr>
+                  <th scope="row">12:00–13:00</th>
+                </tr>
+                <tr>
+                  <th scope="row">13:00–14:00</th>
+                </tr>
+                <tr>
+                  <th scope="row">14:00–15:00</th>
+                  <td
+                    data-day="mon"
+                    data-start="14:00"
+                    data-end="16:00"
+                    data-type="lecture"
+                    rowspan="2"
+                  >
+                    <span class="subject-name">Webové technológie 1</span> —
+                    prednáška
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">15:00–16:00</th>
+                </tr>
+                <tr>
+                  <th scope="row">16:00–17:00</th>
+                  <td rowspan="1"></td>
+                  <td
+                    data-day="wed"
+                    data-start="16:00"
+                    data-end="18:00"
+                    data-type="exercise"
+                    rowspan="2"
+                  >
+                    <span class="subject-name">Databázové systémy</span> —
+                    cvičenie
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">17:00–18:00</th>
+                  <td
+                    data-day="mon"
+                    data-start="17:00"
+                    data-end="18:00"
+                    data-type="pe"
+                    rowspan="1"
+                  >
+                    <span class="subject-name">Telesná kultúra</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">18:00–19:00</th>
+                  <td rowspan="3"></td>
+                  <td
+                    data-day="tue"
+                    data-start="18:00"
+                    data-end="20:00"
+                    data-type="exercise"
+                    rowspan="2"
+                  >
+                    <span class="subject-name">Webové technológie 1</span> —
+                    cvičenie
+                  </td>
+                  <td rowspan="3"></td>
+                </tr>
+                <tr>
+                  <th scope="row">19:00–20:00</th>
+                  <td
+                    data-day="thu"
+                    data-start="19:00"
+                    data-end="20:00"
+                    data-type="exercise"
+                    rowspan="1"
+                  >
+                    <span class="subject-name">Softvérové inžinierstvo</span> —
+                    cvičenie
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">20:00–21:00</th>
+                  <td rowspan="1"></td>
+                  <td rowspan="1"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="schedule-status" data-schedule-status aria-live="polite">
+            Zisťujem, čo práve prebieha…
+          </p>
+          <p class="schedule-empty" data-schedule-empty>
+            Tento filter momentálne nezobrazuje žiadnu hodinu.
+          </p>
+
+          <div class="progress-wrap">
+            <div class="progress-label">
+              <span>Priebeh semestra</span>
+              <span data-semester-progress-label></span>
+            </div>
+            <progress
+              class="semester-progress"
+              data-semester-progress
+              max="100"
+              value="0"
+            ></progress>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <address>
+          <a href="mailto:xmyrinets@stuba.sk">xmyrinets@stuba.sk</a><br />
+          <a href="tel:+421900123456">+421 900 123 456</a><br />
+          © 2026 Bohdan Myrinets
+        </address>
+        <div class="footer-sources">
+          <span>Zdroje</span>
+          <ul>
+            <li><a href="../fonts/OFL.txt">Inter (licencia OFL)</a></li>
+            <li>
+              <a href="https://www.openstreetmap.org/copyright"
+                >Mapové podklady © OpenStreetMap</a
+              >
+            </li>
+            <li><a href="https://leafletjs.com/">Knižnica Leaflet</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+  </body>
+</html>
