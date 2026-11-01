@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>O projekte | Obedové menu v okolí FEI STU</title>
+  <meta name="description" content="Odkiaľ sa berú dáta, ako sa spracúvajú a aké knižnice stránka používa.">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../vendor/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar navbar-expand-sm" aria-label="Hlavná navigácia">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">Obedové menu</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Otvoriť navigáciu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-nav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Menu</a></li>
+            <li class="nav-item"><a class="nav-link active" href="o-projekte.html" aria-current="page">O projekte</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container py-4 py-md-5 about">
+    <section class="page-intro">
+      <h1>O projekte</h1>
+      <p class="lead">Stránka zbiera denné menu reštaurácií v okolí FEI STU a zobrazuje ho podľa dní v týždni. Celá beží v prehliadači, bez servera.</p>
+    </section>
+
+    <section class="about-section">
+      <h2>Odkiaľ sa berú dáta</h2>
+      <p>Menu sa spracúva z troch reštaurácií, z ktorých každá má inú štruktúru stránky. Zdrojové stránky sú uložené ako lokálne kópie v priečinku <code>local/</code>, na originály vedie odkaz pri každej reštaurácii.</p>
+      <ul>
+        <li><a href="https://www.restauracia-drag.sk/denne-menu">Reštaurácia DRAG</a>: záložky s dňami, polievka ako text a hlavné jedlá v tabuľke s cenou a gramážou.</li>
+        <li><a href="https://www.eatandmeet.sk/tyzdenne-menu">Eat &amp; Meet</a>: každé jedlo je samostatný blok s dvoma cenami (bežná a zvýhodnená).</li>
+        <li><a href="https://www.whitedragon.sk/denne-menu">White Dragon</a>: voľný text v odsekoch bez cien pri jedlách, jedna spoločná cena menu.</li>
+      </ul>
+    </section>
+
+    <section class="about-section">
+      <h2>Ako sa dáta spracúvajú</h2>
+      <ol>
+        <li>Stránka reštaurácie sa načíta asynchrónne cez Fetch API.</li>
+        <li><code>DOMParser</code> z nej vytvorí DOM strom, v ktorom sa hľadá cez <code>querySelector</code> a <code>querySelectorAll</code>. Cudzí HTML sa do stránky nikdy nevkladá, zobrazujú sa iba vybrané texty.</li>
+        <li>Každá reštaurácia má vlastnú funkciu, ktorá vráti jedlá v jednotnej štruktúre: deň, dátum, typ, názov, cena, gramáž a alergény.</li>
+        <li>Výsledok sa uloží do <code>localStorage</code>. Ak sú uložené dáta z dnešného dňa, zdroje sa znova nenačítavajú. Tlačidlo „Aktualizovať menu“ načíta všetko nanovo a druhé tlačidlo uložené dáta vymaže.</li>
+        <li>Ak reštaurácia nie je dostupná alebo sa zmení jej štruktúra, zobrazí sa chyba iba v jej karte, ostatné fungujú ďalej.</li>
+      </ol>
+    </section>
+
+    <section class="about-section">
+      <h2>Použité knižnice a nástroje</h2>
+      <ul>
+        <li><a href="https://getbootstrap.com/">Bootstrap 5.3.3</a>: CSS knižnica (mriežka, navigácia, tlačidlá).</li>
+        <li><a href="https://jquery.com/">jQuery 3.7.1</a>: tvorba prvkov stránky a obsluha udalostí.</li>
+        <li><a href="https://fonts.google.com/specimen/Space+Grotesk">Space Grotesk</a> (text) a <a href="https://fonts.google.com/specimen/Bricolage+Grotesque">Bricolage Grotesque</a> (nadpisy): fonty, licencia SIL Open Font License 1.1.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Použité knižnice: <a href="https://getbootstrap.com/">Bootstrap 5.3</a>, <a href="https://jquery.com/">jQuery 3.7</a>. Fonty <a href="https://fonts.google.com/specimen/Space+Grotesk">Space Grotesk</a> a <a href="https://fonts.google.com/specimen/Bricolage+Grotesque">Bricolage Grotesque</a>.</p>
+      <p><a href="../index.html">Späť na menu</a></p>
+    </div>
+  </footer>
+
+  <script src="../vendor/jquery.min.js"></script>
+  <script src="../vendor/bootstrap.bundle.min.js"></script>
+</body>
+</html>

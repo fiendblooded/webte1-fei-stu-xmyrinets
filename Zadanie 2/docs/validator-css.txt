@@ -1,0 +1,19 @@
+Validátor: https://jigsaw.w3.org/css-validator/ (01.11.2026), profil CSS level 3 + SVG
+
+W3C CSS Validator results for styles.css
+
+Congratulations! No Error Found.
+
+Warnings (4)
+
+URI : file://localhost/styles.css
+
+Line : 67 -  Due to their dynamic nature, CSS variables are currently not statically checked
+Line : 131 -  Due to their dynamic nature, CSS variables are currently not statically checked
+Line : 430 -  Due to their dynamic nature, CSS variables are currently not statically checked
+Line : 473 -  Due to their dynamic nature, CSS variables are currently not statically checked
+
+
+
+Valid CSS information
+

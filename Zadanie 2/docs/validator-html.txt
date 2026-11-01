@@ -1,0 +1,5 @@
+Validátor: https://validator.w3.org/nu/ (01.11.2026)
+
+index.html: The document validates according to the specified schema(s).
+
+pages/o-projekte.html: The document validates according to the specified schema(s).
